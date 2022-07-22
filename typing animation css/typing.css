@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    font-family: monospace;
+    max-width: 90vw;
+    max-height: 100vh;
+
+    
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    color: whitesmoke;
+    background: black;
+    top: 0;
+    left:0;
+    right: 0;
+    position: fixed;
+    display: block;
+    
+    
+}
+
+h1 {
+    font-size: 40px;
+    padding-top: 30px; 
+}
+
+main {
+    margin-top: 20%;
+    left: 5%;
+    font-family: monospace;
+    position: relative;
+    z-index: -1;
+   
+    
+}
+
+p {
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+    text-align: justify;
+    
+}
+
+p::before, p::after {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    
+    
+}
+
+p::before {
+    background: white;
+    animation: typing 5s steps(78) forwards;
+    
+}
+
+p::after {
+    width: 5px;
+    background-color: black;
+    animation: typing 5s steps(78) forwards, blink 0.7s infinite;
+    
+}
+
+@keyframes typing {
+    to {left: 100%;}
+}
+
+
+
+@keyframes blink {
+    0% {
+        background-color: black;
+    }
+    60% {
+        background-color: black;
+    }
+    61% {
+        background: rgba(0, 0, 0, 0);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0);
+        
+        
+    }
+        
+}
+
+
+@-webkit-keyframes blink {
+    0% {
+        background-color: black;
+    }
+    100% {
+        background: transparent;
+    }
+        
+}
+
+
+
+footer {
+    height: 90px;
+    min-width: 100vw;
+    width: 100vw;
+    color: whitesmoke;
+    background: black;
+    position: absolute;
+    text-align: center;
+    bottom: 0%;
+    
+    
+}
+
+footer h2 {
+    padding-top: 30px;
+}
+
+
+
+@media all and (max-width: 700px) {
+    header {
+        height: 80px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    
+    main {
+        margin-top: 25%; 
+    }
+ 
+}
+
+@media all and (max-width: 500px) {
+    header {
+        height: 80px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    
+    main {
+        margin-top: 30%; 
+    }
+    
+}
+
+@media all and (max-width: 360px) {
+    header {
+        height: 60px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    
+    main {
+        margin-top: 30%; 
+    }
+    
+}
